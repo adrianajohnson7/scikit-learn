@@ -243,6 +243,7 @@ cdef class DepthFirstTreeBuilder(TreeBuilder):
                 node_id = tree._add_node(parent, is_left, is_leaf, split.feature,
                                          split.threshold, impurity, n_node_samples,
                                          weighted_n_node_samples)
+                print(impurity)                         
 
                 if node_id == <SIZE_t>(-1):
                     rc = -1
