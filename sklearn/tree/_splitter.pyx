@@ -384,6 +384,7 @@ cdef class BestSplitter(BaseDenseSplitter):
             f_j = rand_int(n_drawn_constants, f_i - n_found_constants,
                            random_state)
 
+            print(f_j)
             if f_j < n_known_constants:
                 # f_j in the interval [n_drawn_constants, n_known_constants[
                 tmp = features[f_j]
@@ -406,7 +407,7 @@ cdef class BestSplitter(BaseDenseSplitter):
                     p = start
                     feature_idx_offset = self.X_idx_sorted_stride * current.feature
 
-                    for i in range(self.n_total_samples): 
+                    for i in range(self.n_total_samples):
                         j = X_idx_sorted[i + feature_idx_offset]
                         if sample_mask[j] == 1:
                             samples[p] = j
