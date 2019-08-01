@@ -384,7 +384,6 @@ cdef class BestSplitter(BaseDenseSplitter):
             f_j = rand_int(n_drawn_constants, f_i - n_found_constants,
                            random_state)
 
-            print(f_j)
             if f_j < n_known_constants:
                 # f_j in the interval [n_drawn_constants, n_known_constants[
                 tmp = features[f_j]
